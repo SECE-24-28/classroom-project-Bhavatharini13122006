@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+</head>
+<body>
+
+<form action="check.html" onsubmit="return validate()">
+
+<label>Enter the Name: </label>
+<input type="text" id="tn" name="tname">
+<span id="stn"></span>
+<br><br>
+
+<label>Enter the Password: </label>
+<input type="password" id="tp" name="pass">
+<span id="spass"></span>
+<br><br>
+
+<label>Confirm Password: </label>
+<input type="password" id="ctp" name="cpass">
+<span id="scpass"></span>
+<br><br>
+
+<label>Choose Gender: </label>
+Male <input type="radio" name="gender" value="m" id="mr">
+Female <input type="radio" name="gender" value="f" id="fr">
+<span id="sg"></span>
+<br><br>
+
+<label>Select Course: </label>
+<select id="course" name="coursename">
+    <option value="-1">Select Course</option>
+    <option value="c">C Language</option>
+    <option value="mern">Mern Stack</option>
+    <option value="jfs">Java Fullstack</option>
+    <option value="py">Python Language</option>
+</select>
+<span id="sc"></span>
+<br><br>
+<button type="submit">Submit</button>
+</form>
+</body>
+<script>
+function validate() {
+    let ok = true;
+
+    let name = document.getElementById("tn").value;
+    let pass = document.getElementById("tp").value;
+    let cpass = document.getElementById("ctp").value;
+    let male = document.getElementById("mr").checked;
+    let female = document.getElementById("fr").checked;
+    let course = document.getElementById("course").value;
+
+    if (name === "") {
+        stn.innerHTML = "Enter the name";
+        stn.style.color = "red";
+        ok = false;
+    } else {
+        stn.innerHTML = "valid";
+        stn.style.color = "green";
+    }
+
+    if (pass === "") {
+        spass.innerHTML = "Enter password";
+        spass.style.color = "red";
+        ok = false;
+    } else {
+        spass.innerHTML = "valid";
+        spass.style.color = "green";
+    }
+
+    if (cpass === "") {
+        scpass.innerHTML = "Enter confirm password";
+        scpass.style.color = "red";
+        ok = false;
+    } 
+    else if (pass !== cpass) {
+        scpass.innerHTML = "Password not same";
+        scpass.style.color = "red";
+        ok = false;
+    } 
+    else {
+        scpass.innerHTML = "matched";
+        scpass.style.color = "green";
+    }
+   
+    if (!male && !female) {
+        sg.innerHTML = "Select the gender";
+        sg.style.color = "red";
+        ok = false;
+    } else {
+        sg.innerHTML = "";
+    }
+
+    if (course === "-1") {
+        sc.innerHTML = "Select the course";
+        sc.style.color = "red";
+        ok = false;
+    } else {
+        sc.innerHTML = "";
+    
+    return ok;
+}
+</script>
+
+</html>
