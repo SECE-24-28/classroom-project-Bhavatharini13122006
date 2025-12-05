@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>check page</title>
+</head>
+<body>
+<h2>Student Details</h2>
+<script type="text/javascript">
+
+var query=window.location.search;
+var data=new URLSearchParams(query);
+
+
+document.write("The query: ",query,"<br>");
+document.write("The data: ", data,"<br>");
+
+document.write("The name is: ", data.get("namedata"),"<br>")
+document.write("The password is: ", data.get("passworddata"),"<br>")
+document.write("The gender is: ", data.get("valradio"),"<br>")
+document.write("Selected course is: ", data.get("qualification"),"<br>")
+
+</script>
+</body>
+</html>

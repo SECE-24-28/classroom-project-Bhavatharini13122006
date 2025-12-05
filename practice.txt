@@ -1,0 +1,24 @@
+console.log("hi");
+setTimeout(()=>
+{
+    console.log("hello");
+},2000);
+console.log("hellooooooooooooo");
+console.log("helloooo");
+
+
+function m2(m1)
+{
+    var istrue=true;
+    if(istrue)
+    {
+    m1();
+    }
+}
+
+function method1()
+{
+    console.log("aaaaaaaaaaa")
+}
+console.log("bbbbbbbbbbb")
+m2(method1);
