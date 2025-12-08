@@ -1,0 +1,6 @@
+let a=10
+let b=51
+let c=2
+a=(a^c)^(c)
+b=b%4
+console.log(a+b+c)

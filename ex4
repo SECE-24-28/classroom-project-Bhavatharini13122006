@@ -1,0 +1,8 @@
+let c=2;
+let d=3;
+console.log(c**d)
+let x=10;
+let y="10";
+console.log(x==y)
+console.log(x===y)
+
