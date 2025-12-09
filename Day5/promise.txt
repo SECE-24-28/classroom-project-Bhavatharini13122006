@@ -1,0 +1,21 @@
+function display(){
+return new Promise((resolve,reject)=>{
+    let isTrue=true
+    if(isTrue)
+    {
+      resolve(1000)
+    }
+    else 
+      reject("fail")
+  })
+  }
+   async function show()
+  {try{
+      res=await display()
+      console.log(res)
+  } catch(Exception)
+  {
+      console.log(Exception)
+  }
+  }
+  show()

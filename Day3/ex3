@@ -1,0 +1,14 @@
+let n="ABCD"
+let v1=22
+let v2=13.22
+let isdata=true
+let nodata=null
+let a
+console.log(n)
+console.log(v1)
+console.log(v2)
+console.log(isdata)
+console.log(nodata)
+console.log(a)
+let m=10
+console.log(m<<3)

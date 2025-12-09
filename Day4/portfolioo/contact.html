@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Contact</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: lightgrey; 
+}
+
+#main{
+  width:100%;
+  background-color:grey; 
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 30px;
+}
+
+#name{
+  font-weight:bold;
+  color:black;
+}
+
+#menu{
+  display:flex;
+  gap:50px;
+}
+
+.item{
+  text-align:center;
+}
+
+.item a{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+}
+
+.item a:hover{
+  color:white;
+}
+
+#container{
+  width:60%;
+  margin:auto;
+  margin-top:40px;
+  background-color:white;
+  padding:30px;
+  border-radius:10px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+label{
+  font-weight:bold;
+  display:block;
+  margin-bottom:6px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  background-color:white; 
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background-color:grey;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:black;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="main">
+  <div id="name">Bhavatharini Kumaresan</div>
+  <div id="menu">
+    <div class="item"><a href="portfolio.html">Home</a></div>
+    <div class="item"><a href="portfolio.html">About</a></div>
+    <div class="item"><a href="Qualifications.html">Qualification</a></div>
+    <div class="item"><a href="certificates.html">Certificates</a></div>
+    <div class="item"><a href="contact.html">Contact</a></div>
+  </div>
+</div>
+
+<div id="container">
+  <h2>Contact Me</h2>
+
+  <form>
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name">
+
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+</body>
+</html>

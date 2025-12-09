@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<title>sample</title>
+	<meta charset="utf-8">	
+	</head>
+<body>
+<form action="check.html" method="get" id="frmstureg" name="frmstureg" onsubmit="return validate()" onreset="return resetForm()">
+<label for="txtstuname">Student Name:</label><br>
+<input type="text" id="txtstuname" value="" placeholder="Enter ur name"   name="namedata"  />
+<span id="spanisstunamevalid"></span><br><br>	
+
+<label for="txtstupass">Password:</label><br>
+<input type="password" id="txtstupass" value="" placeholder="Enter ur password"   name="passworddata"  />
+<span id="spanispassvalid"></span><br><br>
+
+
+<label for="txtconfirmstupass">Confrim Password:</label><br>
+<input type="password" id="txtconfirmstupass" value="" placeholder="re-enter  password"   name="cpassworddata"  />
+<span id="spaniscpassvalid"></span><br><br>
+
+
+<label  >Gender:</label><br>
+<input type="radio" id="rmale" value="male"   name="valradio"  />
+<label>Male</label> 
+<input type="radio" id="rfemale" value="female"   name="valradio"  />
+<label>Female</label> 
+<span id="spangender"></span><br><br>
+
+<label >Qualification:</label><br>
+<select type="select" id="stuqualification"    name="qualification" >
+	<option value="-1">--select--</option>
+	<option value="b.tech">B.Tech</option>
+	<option value="be(cse)">BE(CSE)</option>
+	<option value="mech">Mech</option>
+</select>
+<span id="spanqualification"></span><br><br>
+<br>
+ 
+<input type="submit" value="SUBMIT"/>
+<input type="reset" value="RESET"/>				
+</form>	
+<script type="text/javascript">
+function validate()
+{
+	 isnamevalid=true; 
+	 ispassvalid=true;	
+	iscpassvalid=true;
+	isgendervalid=true;
+	isqualification=true;
+	if(document.getElementById("txtstuname").value=="")
+	{
+		isnamevalid=false;
+	 document.getElementById("spanisstunamevalid").innerHTML="plz enter the name";
+	document.getElementById("spanisstunamevalid").style.color="red"; 
+	}
+	else
+	{
+	isnamevalid=true;
+	 document.getElementById("spanisstunamevalid").innerHTML="valid";
+	document.getElementById("spanisstunamevalid").style.color="green"; 
+	}
+
+	if(document.getElementById("txtstupass").value=="")
+	{
+		ispassvalid=false;
+	 document.getElementById("spanispassvalid").innerHTML="plz enter ur password";
+	document.getElementById("spanispassvalid").style.color="red"; 
+	}
+	else
+	{
+	ispassvalid=true;
+	 document.getElementById("spanispassvalid").innerHTML="valid";
+	document.getElementById("spanispassvalid").style.color="green"; 
+	}
+
+	if(document.getElementById("txtconfirmstupass").value=="")
+	{
+		iscpassvalid=false;
+	 document.getElementById("spaniscpassvalid").innerHTML="plz re-enter ur password";
+	document.getElementById("spaniscpassvalid").style.color="red"; 
+	}
+else if(document.getElementById("txtconfirmstupass").value!=document.getElementById("txtstupass").value)
+	{
+		iscpassvalid=false;
+	 document.getElementById("spaniscpassvalid").innerHTML="password and confirm password not same";
+	document.getElementById("spaniscpassvalid").style.color="red"; 
+	}
+	else
+	{
+	iscpassvalid=true;
+	 document.getElementById("spaniscpassvalid").innerHTML="valid";
+	document.getElementById("spaniscpassvalid").style.color="green"; 
+	}
+
+if(document.getElementById("rmale").checked!=true && document.getElementById("rfemale").checked!=true)
+	{
+		isgendervalid=false;
+	 document.getElementById("spangender").innerHTML="plz choose the gender";
+	document.getElementById("spangender").style.color="red"; 
+	}
+	else
+	{
+	isgendervalid=true;
+	 document.getElementById("spangender").innerHTML="valid";
+	document.getElementById("spangender").style.color="green"; 
+	}
+
+if(document.getElementById("stuqualification").value=="-1")
+	{
+		isqualification=false;
+	 document.getElementById("spanqualification").innerHTML="plz choose the qualification";
+	document.getElementById("spanqualification").style.color="red"; 
+	}
+	else
+	{
+	isqualification=true;
+	 document.getElementById("spanqualification").innerHTML="valid";
+	document.getElementById("spanqualification").style.color="green"; 
+	}
+	
+	if( isnamevalid==false || ispassvalid==false || iscpassvalid==false||isgendervalid==false||isqualification==false)
+	{
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+function resetForm()
+{
+ document.getElementById("spanisstunamevalid").innerHTML="";
+document.getElementById("spanispassvalid").innerHTML="";
+document.getElementById("spaniscpassvalid").innerHTML="";	 
+document.getElementById("rmale").checked=false;	 
+document.getElementById("rfemale").checked=false;
+document.getElementById("spangender").innerHTML="";
+document.getElementById("spanqualification").innerHTML="";
+}
+
+</script>
+</body>
+</html>
